@@ -9,8 +9,9 @@ public class ZooManagement {
         int nbrCages = scanner.nextInt();
         Scanner scanner2 = new Scanner(System.in);
         System.out.println("donner le nom de zoo :");
-        System.out.printf(zooName  +  " comporte " + nbrCages + " cages ");
         String zooName = scanner.next();
+        System.out.printf(zooName  +  " comporte " + nbrCages + " cages ");
+   
 
 
 }
