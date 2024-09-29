@@ -2,18 +2,18 @@ public class Zoo {
     Animal[] animals;
     String name;
     String city;
-    final int nbrCages;
-    int nbrAnimals;
+    final int NBR_CAGES;
+    int nbrAnimals=0;
 
     public Zoo(String name, String city) {
-        this.nbrCages = 25;
-        this.animals = new Animal[nbrCages];
+        this.NBR_CAGES = 25;
+        this.animals = new Animal[NBR_CAGES];
         this.name = name;
         this.city = city;
     }
 
     boolean addAnimal(Animal animal) {
-        if(searchAnimal(animal.name) == -1 && nbrAnimals < nbrCages) {
+        if(searchAnimal(animal.name) == -1 && nbrAnimals < NBR_CAGES) {
             this.animals[nbrAnimals] = animal;
             nbrAnimals++;
             return true;
@@ -23,7 +23,7 @@ public class Zoo {
 
 
     public void ajouterAnimal(Animal animal, int cageNumber) {
-        if (cageNumber >= 0 && cageNumber < this.nbrCages) {
+        if (cageNumber >= 0 && cageNumber < this.NBR_CAGES) {
             this.animals[cageNumber] = animal;
         } else {
             System.out.println("Numéro de cage invalide");
@@ -34,7 +34,7 @@ public class Zoo {
     public void displayZoo(Zoo a) {
         System.out.printf("Name: " + a.name);
         System.out.printf("City: " + a.city);
-        System.out.printf("Nombre de cage: " + a.nbrCages);
+        System.out.printf("Nombre de cage: " + a.NBR_CAGES);
     }
 
     void displayAnimals() {
@@ -52,11 +52,18 @@ public class Zoo {
         }
         return -1;
     }
+    boolean removeAnimal(Animal animal) {
+        int index = searchAnimal(animal.name);
+        this.animals[index] = null;
+        return true;
+    }
+
+    //boolean isZooFull()
 
 
 
     public String toString() {
-        return String.format("Name: %s, City: %s, Nombre de cages: %d", this.name, this.city, this.nbrCages);
+        return String.format("Name: %s, City: %s, Nombre de cages: %d", this.name, this.city, this.NBR_CAGES);
     }
 
     public static void main(String[] args) {
@@ -74,6 +81,8 @@ public class Zoo {
         myZoo.displayAnimals();
         int d=myZoo.searchAnimal("Black1");
         System.out.println(d);
+        myZoo.removeAnimal(lion);
+        myZoo.displayAnimals();
 
 
     }
