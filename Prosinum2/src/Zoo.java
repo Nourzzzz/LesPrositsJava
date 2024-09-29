@@ -2,11 +2,11 @@ public class Zoo {
     Animal[] animals;
     String name;
     String city;
-    int nbrCages;
+    final int nbrCages;
     int nbrAnimals;
 
-    public Zoo(String name, String city, int nbrCages) {
-        this.nbrCages = nbrCages;
+    public Zoo(String name, String city) {
+        this.nbrCages = 25;
         this.animals = new Animal[nbrCages];
         this.name = name;
         this.city = city;
@@ -54,6 +54,7 @@ public class Zoo {
     }
 
 
+
     public String toString() {
         return String.format("Name: %s, City: %s, Nombre de cages: %d", this.name, this.city, this.nbrCages);
     }
@@ -62,7 +63,7 @@ public class Zoo {
         Animal lion = new Animal("felin", "Black1", 20, false);
         Animal otter = new Animal("Mustelids", "ottie", 5, true);
         Animal lion1 = new Animal("felin", "Black2", 20, false);
-        Zoo myZoo = new Zoo("aaa", "Tunis", 25);
+        Zoo myZoo = new Zoo("aaa", "Tunis");
        // myZoo.displayZoo(myZoo);
        // myZoo.ajouterAnimal(lion, 0);
        // System.out.println(myZoo.toString());
