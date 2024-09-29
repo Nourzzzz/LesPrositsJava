@@ -3,12 +3,21 @@ public class Zoo {
     String name;
     String city;
     int nbrCages;
+    int nbrAnimals;
 
     public Zoo(String name, String city, int nbrCages) {
         this.nbrCages = nbrCages;
         this.animals = new Animal[nbrCages];
         this.name = name;
         this.city = city;
+    }
+
+    boolean addAnimal(Animal animal)
+    {
+        this.animals[nbrAnimals] = animal;
+        nbrAnimals++;
+        return true;
+
     }
 
     public void ajouterAnimal(Animal animal, int cageNumber) {
@@ -32,10 +41,14 @@ public class Zoo {
 
     public static void main(String[] args) {
         Animal lion = new Animal("felin", "Black", 20, false);
-        new Animal("Mustelids", "ottie", 5, true);
+        Animal otter = new Animal("Mustelids", "ottie", 5, true);
+        Animal lion1 = new Animal("felin", "Black", 20, false);
         Zoo myZoo = new Zoo("aaa", "Tunis", 25);
         myZoo.displayZoo(myZoo);
         myZoo.ajouterAnimal(lion, 0);
         System.out.println(myZoo.toString());
+        myZoo.addAnimal(lion1);
+
+
     }
 }
