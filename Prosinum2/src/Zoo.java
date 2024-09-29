@@ -12,13 +12,15 @@ public class Zoo {
         this.city = city;
     }
 
-    boolean addAnimal(Animal animal)
-    {
-        this.animals[nbrAnimals] = animal;
-        nbrAnimals++;
-        return true;
-
+    boolean addAnimal(Animal animal) {
+        if(searchAnimal(animal.name) == -1 && nbrAnimals < nbrCages) {
+            this.animals[nbrAnimals] = animal;
+            nbrAnimals++;
+            return true;
+        }
+        return false;
     }
+
 
     public void ajouterAnimal(Animal animal, int cageNumber) {
         if (cageNumber >= 0 && cageNumber < this.nbrCages) {
@@ -66,8 +68,10 @@ public class Zoo {
        // System.out.println(myZoo.toString());
         myZoo.addAnimal(lion1);
         myZoo.addAnimal(otter);
+        myZoo.addAnimal(lion);
+        myZoo.addAnimal(otter);
         myZoo.displayAnimals();
-        int d=myZoo.searchAnimal("black1");
+        int d=myZoo.searchAnimal("Black1");
         System.out.println(d);
 
 
