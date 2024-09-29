@@ -58,7 +58,11 @@ public class Zoo {
         return true;
     }
 
-    //boolean isZooFull()
+    boolean isZooFull()
+    {
+        return nbrAnimals == NBR_CAGES;
+
+    }
 
 
 
