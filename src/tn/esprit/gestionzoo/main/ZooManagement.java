@@ -50,6 +50,7 @@ public class ZooManagement {
         ((Aquatic) aquatic).swim();
         float max = myZoo.maxPenguinSwimmingDepth();
         System.out.println(max);
+        myZoo.displayNumberOfAquaticsByTypes();
 
 
 
