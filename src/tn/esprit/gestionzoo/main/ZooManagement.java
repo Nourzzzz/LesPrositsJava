@@ -35,17 +35,22 @@ public class ZooManagement {
         aquatic.swim();
         dolphin.swim();
         penguin.swim();*/
-        Animal aquatic = new Aquatic("Aquatic", "aqua", 5, true,"ocean");
-        Animal dolphin = new Dolphin("Mustelids", "ottie", 5, true,"ocean",82);
-        Animal penguin = new Penguin("pengy", "pengo", 5, true,"ocean",200);
+        Aquatic aquatic = new Aquatic("Aquatic", "aqua", 5, true,"ocean");
+        Aquatic dolphin = new Dolphin("Mustelids", "ottie", 5, true,"ocean",82);
+        Aquatic penguin = new Penguin("pengy", "pengo", 5, true,"ocean",200);
+        Aquatic penguin1 = new Penguin("pengy", "pengo", 5, true,"ocean",1000);
         Zoo myZoo = new Zoo("aaa", "Tunis");
         myZoo.addAquaticAnimal((Aquatic) dolphin);
         myZoo.addAquaticAnimal((Aquatic) penguin);
         myZoo.addAquaticAnimal((Aquatic) aquatic);
+        myZoo.addAquaticAnimal((Aquatic) penguin1);
         myZoo.displayAnimals();
         ((Dolphin) dolphin).swim();
         ((Penguin) penguin).swim();
         ((Aquatic) aquatic).swim();
+        float max = myZoo.maxPenguinSwimmingDepth();
+        System.out.println(max);
+
 
 
 

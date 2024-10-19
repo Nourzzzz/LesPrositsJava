@@ -6,14 +6,14 @@ public class Zoo {
     protected String city;
     protected final int NBR_CAGES;
     protected int nbrAnimals=0;
-    protected Animal[] aquaticAnimals;
+    protected Aquatic[] aquaticAnimals;
 
     public Zoo(String name, String city) {
         this.NBR_CAGES = 25;
         this.animals = new Animal[NBR_CAGES];
         this.name = name;
         this.city = city;
-        this.aquaticAnimals = new Animal[10];
+        this.aquaticAnimals = new Aquatic[10];
     }
     public String toString() {
         return String.format("Name: %s, City: %s, Nombre de cages: %d", this.name, this.city, this.NBR_CAGES);
@@ -85,7 +85,7 @@ public class Zoo {
     }
 
     public void displayAnimals() {
-        for (Animal animal : aquaticAnimals) {
+        for (Aquatic animal : aquaticAnimals) {
             System.out.println(animal);
         }
 
@@ -126,6 +126,25 @@ public class Zoo {
         } else {
             System.out.println("The zoo is full! Can't add more aquatic animals.");
         }
+    }
+
+    public float maxPenguinSwimmingDepth()
+    {
+        float max=0;
+        for (Aquatic animal : aquaticAnimals)
+        {
+            if(animal instanceof Penguin)
+            {
+                if(max<((Penguin) animal).swimmingDepth)
+                {
+                    max=((Penguin)  animal).swimmingDepth;
+                }
+            }
+
+        }
+        return max;
+
+
     }
 
 
