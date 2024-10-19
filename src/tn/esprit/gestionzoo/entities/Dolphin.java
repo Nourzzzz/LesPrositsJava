@@ -12,7 +12,7 @@ public class Dolphin extends Aquatic{
         return super.toString()+"Dolphin{" + "swimmingSpeed=" + swimmingSpeed + '}';
   }
 
-    public void swim(){
+    public static void swim(){
         System.out.println("This dolphin is swimming");
     }
 

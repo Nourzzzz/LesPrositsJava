@@ -6,12 +6,14 @@ public class Zoo {
     protected String city;
     protected final int NBR_CAGES;
     protected int nbrAnimals=0;
+    protected Aquatic[] aquaticAnimals;
 
     public Zoo(String name, String city) {
         this.NBR_CAGES = 25;
         this.animals = new Animal[NBR_CAGES];
         this.name = name;
         this.city = city;
+        this.aquaticAnimals = new Aquatic[10];
     }
     public String toString() {
         return String.format("Name: %s, City: %s, Nombre de cages: %d", this.name, this.city, this.NBR_CAGES);
@@ -83,7 +85,7 @@ public class Zoo {
     }
 
     public void displayAnimals() {
-        for (Animal animal : animals) {
+        for (Aquatic animal : aquaticAnimals) {
             System.out.println(animal);
         }
 
@@ -115,6 +117,58 @@ public class Zoo {
             return a;
         }
         return b;
+    }
+
+    public void addAquaticAnimal(Aquatic aquatic) {
+        if (nbrAnimals < aquaticAnimals.length) {
+            aquaticAnimals[nbrAnimals] = aquatic;  // Ajoute l'animal dans le tableau
+            nbrAnimals++;
+        } else {
+            System.out.println("The zoo is full! Can't add more aquatic animals.");
+        }
+    }
+
+    public float maxPenguinSwimmingDepth()
+    {
+        float max=0;
+        for (Aquatic animal : aquaticAnimals)
+        {
+            if(animal instanceof Penguin)
+            {
+                if(max<((Penguin) animal).swimmingDepth)
+                {
+                    max=((Penguin)  animal).swimmingDepth;
+                }
+            }
+
+        }
+        return max;
+
+
+    }
+
+    public void displayNumberOfAquaticsByTypes()
+    {
+        int Pen = 0;
+        int Dolp= 0;
+
+        for (Aquatic animal : aquaticAnimals)
+        {
+            if(animal instanceof Penguin)
+            {
+                Pen=Pen+1;
+            }
+            else if(animal instanceof Dolphin)
+            {
+                Dolp=Dolp+1;
+            }
+
+        }
+        System.out.println("Le nombre de penguin est " + Pen);
+        System.out.println("Le nombre de doplhin est " + Dolp);
+
+
+
     }
 
 

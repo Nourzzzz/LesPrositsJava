@@ -12,7 +12,18 @@ public class Aquatic extends Animal {
         return super.toString()+"Aquatic{" + "habitat=" + habitat + '}';
     }
 
-    public void swim(){
+    public static void swim(){
         System.out.println("This Aquatic Animal is swimming");
     }
+
+    public boolean equals(Object obj) {
+        if (null == obj) return false;
+        if (obj instanceof Aquatic aquatic) {
+            return age == aquatic.age && name.equals(aquatic.name) && habitat.equals(aquatic.habitat);
+        }
+
+        return false;
+    }
+
+
 }
