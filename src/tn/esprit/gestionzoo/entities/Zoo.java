@@ -6,12 +6,14 @@ public class Zoo {
     protected String city;
     protected final int NBR_CAGES;
     protected int nbrAnimals=0;
+    protected Animal[] aquaticAnimals;
 
     public Zoo(String name, String city) {
         this.NBR_CAGES = 25;
         this.animals = new Animal[NBR_CAGES];
         this.name = name;
         this.city = city;
+        this.aquaticAnimals = new Animal[10];
     }
     public String toString() {
         return String.format("Name: %s, City: %s, Nombre de cages: %d", this.name, this.city, this.NBR_CAGES);
