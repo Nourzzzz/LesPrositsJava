@@ -12,7 +12,7 @@ public class Aquatic extends Animal {
         return super.toString()+"Aquatic{" + "habitat=" + habitat + '}';
     }
 
-    public void swim(){
+    public static void swim(){
         System.out.println("This Aquatic Animal is swimming");
     }
 }

@@ -26,7 +26,7 @@ public class ZooManagement {
         myZoo.displayAnimals();
         Zoo myZoo3 = myZoo.comparerZoo(myZoo, myZoo2);
         System.out.println(myZoo3);*/
-        Aquatic aquatic = new Aquatic("Aquatic", "aqua", 5, true,"ocean");
+       /* Aquatic aquatic = new Aquatic("Aquatic", "aqua", 5, true,"ocean");
         Terrestrial  terrestrial = new Terrestrial("terrestre","terres", 5, true,2);
         Dolphin dolphin = new Dolphin("Mustelids", "ottie", 5, true,"ocean",82);
         Penguin penguin = new Penguin("pengy", "pengo", 5, true,"ocean",200);
@@ -34,12 +34,18 @@ public class ZooManagement {
         System.out.println(penguin);
         aquatic.swim();
         dolphin.swim();
-        penguin.swim();
+        penguin.swim();*/
+        Animal aquatic = new Aquatic("Aquatic", "aqua", 5, true,"ocean");
+        Animal dolphin = new Dolphin("Mustelids", "ottie", 5, true,"ocean",82);
+        Animal penguin = new Penguin("pengy", "pengo", 5, true,"ocean",200);
         Zoo myZoo = new Zoo("aaa", "Tunis");
-        myZoo.addAquaticAnimal(dolphin);
-        myZoo.addAquaticAnimal(penguin);
-        myZoo.addAquaticAnimal(aquatic);
+        myZoo.addAquaticAnimal((Aquatic) dolphin);
+        myZoo.addAquaticAnimal((Aquatic) penguin);
+        myZoo.addAquaticAnimal((Aquatic) aquatic);
         myZoo.displayAnimals();
+        ((Dolphin) dolphin).swim();
+        ((Penguin) penguin).swim();
+        ((Aquatic) aquatic).swim();
 
 
 
