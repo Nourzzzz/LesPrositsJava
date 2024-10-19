@@ -35,6 +35,12 @@ public class ZooManagement {
         aquatic.swim();
         dolphin.swim();
         penguin.swim();
+        Zoo myZoo = new Zoo("aaa", "Tunis");
+        myZoo.addAquaticAnimal(dolphin);
+        myZoo.addAquaticAnimal(penguin);
+        myZoo.addAquaticAnimal(aquatic);
+        myZoo.displayAnimals();
+
 
 
     }

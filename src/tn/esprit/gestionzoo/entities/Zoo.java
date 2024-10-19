@@ -85,7 +85,7 @@ public class Zoo {
     }
 
     public void displayAnimals() {
-        for (Animal animal : animals) {
+        for (Animal animal : aquaticAnimals) {
             System.out.println(animal);
         }
 
@@ -117,6 +117,15 @@ public class Zoo {
             return a;
         }
         return b;
+    }
+
+    public void addAquaticAnimal(Aquatic aquatic) {
+        if (nbrAnimals < aquaticAnimals.length) {
+            aquaticAnimals[nbrAnimals] = aquatic;  // Ajoute l'animal dans le tableau
+            nbrAnimals++;
+        } else {
+            System.out.println("The zoo is full! Can't add more aquatic animals.");
+        }
     }
 
 
