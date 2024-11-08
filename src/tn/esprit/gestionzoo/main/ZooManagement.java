@@ -74,7 +74,9 @@ public class ZooManagement {
     */
             Aquatic dolphin = new Dolphin("Mustelids", "ottie", 5, true,"ocean",82);
             Terrestrial chat = new Terrestrial("chat", "chat", 5, true, 4);
+            Penguin penguin = new Penguin("pengy", "pengo", 5, true,"ocean",200);
             dolphin.eatMeat(Food.MEAT);
+            penguin.eatMeat(Food.MEAT);
             dolphin.eatMeat(Food.PLANT);
             chat .eatMeat(Food.MEAT);
             chat .eatPlant(Food.PLANT);
