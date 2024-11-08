@@ -1,17 +1,22 @@
 package tn.esprit.gestionzoo.entities;
 
+
 public class Animal {
     protected  String family;
     protected   String name;
     protected   int age;
     protected boolean isMammal;
 
-    public Animal(String family, String name, int age, Boolean isMammal) {
+    public Animal(String family, String name, int age, boolean isMammal) throws InvalidAgeException {
+        if (age < 0) {
+            throw new InvalidAgeException("L'âge de l'animal ne peut pas être négatif : " + age);
+        }
         this.family = family;
         this.name = name;
         this.age = age;
         this.isMammal = isMammal;
     }
+
 
     public String toString() {
         return String.format("Family: %s, Name: %s, Age: %d, isMammal: %b", this.family, this.name, this.age, this.isMammal);//instruction 9
@@ -51,7 +56,7 @@ public class Animal {
 
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidAgeException {
         Animal lion = new Animal("felin", "Black", 20, true);// instruction 6
         System.out.printf(lion.family);
         System.out.println(lion.toString());

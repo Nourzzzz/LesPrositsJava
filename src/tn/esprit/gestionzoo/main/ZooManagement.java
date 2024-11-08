@@ -5,12 +5,9 @@ import tn.esprit.gestionzoo.entities.*;
 public class ZooManagement {
 
 
-    public static void main(String[] args) {
-       /* Animal lion = new Animal("felin", "Black1", 20, false);
-        Animal otter = new Animal("Mustelids", "ottie", 5, true);
-        Animal lion1 = new Animal("felin", "Black2", 20, false);
-        Zoo myZoo = new Zoo("aaa", "Tunis");
-        Zoo myZoo2 = new Zoo("bb", "sousse");
+    public static void main(String[] args) throws InvalidAgeException{
+
+      /*
         // myZoo.displayZoo(myZoo);
         // myZoo.ajouterAnimal(lion, 0);
         // System.out.println(myZoo.toString());
@@ -34,7 +31,7 @@ public class ZooManagement {
         System.out.println(penguin);
         aquatic.swim();
         dolphin.swim();
-        penguin.swim();*/
+        penguin.swim();
         Aquatic aquatic = new Aquatic("Aquatic", "aqua", 5, true,"ocean");
         Aquatic dolphin = new Dolphin("Mustelids", "ottie", 5, true,"ocean",82);
         Aquatic penguin = new Penguin("pengy", "pengo", 5, true,"ocean",200);
@@ -50,7 +47,31 @@ public class ZooManagement {
         ((Aquatic) aquatic).swim();
         float max = myZoo.maxPenguinSwimmingDepth();
         System.out.println(max);
-        myZoo.displayNumberOfAquaticsByTypes();
+        myZoo.displayNumberOfAquaticsByTypes();*/
+        Animal lion = new Animal("felin", "Black1", 20, false);
+        Animal otter = new Animal("Mustelids", "ottie", 5, true);
+        Animal shark = new Animal("shark ", "shark ", 20, false);
+        Animal giraffe = new Animal("giraffe", "giraffe", -20, false);
+        Zoo myZoo = new Zoo("aaa", "Tunis");
+        try {
+
+
+            myZoo.addAnimal(lion);
+            System.out.println("Nombre d'animaux dans le zoo : " + myZoo.getNbrAnimals());
+
+            myZoo.addAnimal(otter);
+            System.out.println("Nombre d'animaux dans le zoo : " + myZoo.getNbrAnimals());
+
+            myZoo.addAnimal(giraffe);
+            System.out.println("Nombre d'animaux dans le zoo : " + myZoo.getNbrAnimals());
+
+            myZoo.addAnimal(lion);
+        } catch (ZooFullException e) {
+            System.out.println(e.getMessage());
+        }
+
+        myZoo.displayZoo(myZoo);
+
 
 
 
