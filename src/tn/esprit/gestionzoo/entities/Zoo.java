@@ -59,14 +59,16 @@ public class Zoo {
         return nbrAnimals;
     }
 
-    public boolean addAnimal(Animal animal) {
-        if(searchAnimal(animal.name) == -1 && !isZooFull() ) {
+    public void addAnimal(Animal animal) {
+        if (searchAnimal(animal.name) == -1) {
             this.animals[nbrAnimals] = animal;
             nbrAnimals++;
-            return true;
+            System.out.println("Animal ajouté : " + animal);
+        } else {
+            System.out.println("L'animal existe déjà dans le zoo.");
         }
-        return false;
     }
+
 
 
     public void ajouterAnimal(Animal animal, int cageNumber) {
