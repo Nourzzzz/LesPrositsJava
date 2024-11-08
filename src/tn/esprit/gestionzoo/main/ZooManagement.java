@@ -48,7 +48,7 @@ public class ZooManagement {
         float max = myZoo.maxPenguinSwimmingDepth();
         System.out.println(max);
         myZoo.displayNumberOfAquaticsByTypes();*/
-        Animal lion = new Animal("felin", "Black1", 20, false);
+       /* Animal lion = new Animal("felin", "Black1", 20, false);
         Animal otter = new Animal("Mustelids", "ottie", 5, true);
         Animal shark = new Animal("shark ", "shark ", 20, false);
         Animal giraffe = new Animal("giraffe", "giraffe", -20, false);
@@ -71,10 +71,14 @@ public class ZooManagement {
         }
 
         myZoo.displayZoo(myZoo);
-
-
-
-
+    */
+            Aquatic dolphin = new Dolphin("Mustelids", "ottie", 5, true,"ocean",82);
+            Terrestrial chat = new Terrestrial("chat", "chat", 5, true, 4);
+            dolphin.eatMeat(Food.MEAT);
+            dolphin.eatMeat(Food.PLANT);
+            chat .eatMeat(Food.MEAT);
+            chat .eatPlant(Food.PLANT);
+            chat .eatPlantAndMeat(Food.BOTH);
 
     }
 }
