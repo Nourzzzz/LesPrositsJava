@@ -5,7 +5,7 @@ import tn.esprit.gestionzoo.entities.*;
 public class ZooManagement {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidAgeException{
 
       /*
         // myZoo.displayZoo(myZoo);
@@ -51,9 +51,11 @@ public class ZooManagement {
         Animal lion = new Animal("felin", "Black1", 20, false);
         Animal otter = new Animal("Mustelids", "ottie", 5, true);
         Animal shark = new Animal("shark ", "shark ", 20, false);
-        Animal giraffe = new Animal("giraffe", "giraffe", 20, false);
+        Animal giraffe = new Animal("giraffe", "giraffe", -20, false);
         Zoo myZoo = new Zoo("aaa", "Tunis");
         try {
+
+
             myZoo.addAnimal(lion);
             System.out.println("Nombre d'animaux dans le zoo : " + myZoo.getNbrAnimals());
 
@@ -67,6 +69,7 @@ public class ZooManagement {
         } catch (ZooFullException e) {
             System.out.println(e.getMessage());
         }
+
         myZoo.displayZoo(myZoo);
 
 
