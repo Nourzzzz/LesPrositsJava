@@ -67,5 +67,8 @@ public class AffectationHashMap {
             }
         }
     }
+    public boolean rechercherEmploye(Employe e) {
+        return affectations.containsKey(e);
+    }
 
 }

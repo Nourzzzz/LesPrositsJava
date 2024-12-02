@@ -42,5 +42,6 @@ public class App {
         gestionAffectations.afficherEmployes();
         gestionAffectations.afficherDepartements();
 
+
     }
 }
