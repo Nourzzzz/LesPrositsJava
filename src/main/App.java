@@ -4,7 +4,7 @@ import entities.*;
 public class App {
     public static void main(String[] args) {
         SocieteArrayList societe = new SocieteArrayList();
-
+/*
         // Ajouter des employés
         societe.ajouterEmploye(new Employe(3, "Ali", "Mohamed", "IT", 2));
         societe.ajouterEmploye(new Employe(1, "Ahmed", "Salah", "Finance", 1));
@@ -23,5 +23,20 @@ public class App {
         societe.trierEmployeParNomDépartementEtGrade();
         System.out.println("Après tri par Département et Grade :");
         societe.displayEmploye();
+        */
+        AffectationHashMap gestionAffectations = new AffectationHashMap();
+        Employe e1 = new Employe(1, "Ali", "Mohamed", "IT", 2);
+        Employe e2 = new Employe(2, "Ahmed", "Salah", "Finance", 1);
+        Employe e3 = new Employe(3, "Leila", "Khaled", "RH", 3);
+        Departement d1 = new Departement(101, "IT", 10);
+        Departement d2 = new Departement(102, "Finance", 5);
+        Departement d3 = new Departement(103, "RH", 8);
+        gestionAffectations.ajouterEmployeDepartement(e1, d1);
+        gestionAffectations.ajouterEmployeDepartement(e2, d2);
+        gestionAffectations.ajouterEmployeDepartement(e3, d3);
+
+        // Tester l'ajout d'un employé déjà affecté
+        gestionAffectations.ajouterEmployeDepartement(e1, d2);
+
     }
 }
