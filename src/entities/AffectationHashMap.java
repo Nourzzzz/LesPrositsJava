@@ -47,5 +47,15 @@ public class AffectationHashMap {
             System.out.println("Mahouch mawjoud.");
         }
     }
+    public void afficherEmployes() {
+        if (affectations.isEmpty()) {
+            System.out.println("Aucun employé enregistré.");
+        } else {
+            System.out.println("Liste des employés :");
+            for (Employe e : affectations.keySet()) {
+                System.out.println(e);
+            }
+        }
+    }
 
 }
