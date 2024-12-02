@@ -21,5 +21,15 @@ public class AffectationHashMap {
             System.out.println("Employé " + e.getNom() + " affecté au département " + d.getNom());
         }
     }
+    public void afficherEmployesEtDepartements() {
+        if (affectations.isEmpty()) {
+            System.out.println("Aucune affectation enregistrée.");
+        } else {
+            System.out.println("Liste des affectations (Employé : Département) :");
+            for (Map.Entry<Employe, Departement> entry : affectations.entrySet()) {
+                System.out.println(entry.getKey() + " : " + entry.getValue());
+            }
+        }
+    }
 
 }
