@@ -31,5 +31,13 @@ public class AffectationHashMap {
             }
         }
     }
+    public void supprimerEmploye(Employe e) {
+        if (affectations.containsKey(e)) {
+            affectations.remove(e);
+            System.out.println("L'employé " + e.getNom() + " a été supprimé.");
+        } else {
+            System.out.println("L'employé " + e.getNom() + " n'existe pas.");
+        }
+    }
 
 }

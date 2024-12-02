@@ -34,9 +34,9 @@ public class App {
         gestionAffectations.ajouterEmployeDepartement(e1, d1);
         gestionAffectations.ajouterEmployeDepartement(e2, d2);
         gestionAffectations.ajouterEmployeDepartement(e3, d3);
-
-        // Tester l'ajout d'un employé déjà affecté
         gestionAffectations.ajouterEmployeDepartement(e1, d2);
+        gestionAffectations.supprimerEmploye(e2);
+        gestionAffectations.afficherEmployesEtDepartements();
 
     }
 }
