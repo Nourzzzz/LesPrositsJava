@@ -39,5 +39,13 @@ public class AffectationHashMap {
             System.out.println("L'employé " + e.getNom() + " n'existe pas.");
         }
     }
+    public void supprimerEmployeEtDepartement(Employe e, Departement d) {
+        if (affectations.containsKey(e) && affectations.get(e).equals(d)) {
+            affectations.remove(e);
+            System.out.println("L'employé " + e.getNom() + " affecté au département " + d.getNom() + " a été supprimé.");
+        } else {
+            System.out.println("Mahouch mawjoud.");
+        }
+    }
 
 }
