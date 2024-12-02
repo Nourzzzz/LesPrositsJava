@@ -40,6 +40,7 @@ public class App {
         gestionAffectations.supprimerEmployeEtDepartement(e3, d3);
         gestionAffectations.afficherEmployesEtDepartements();
         gestionAffectations.afficherEmployes();
+        gestionAffectations.afficherDepartements();
 
     }
 }

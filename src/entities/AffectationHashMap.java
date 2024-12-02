@@ -57,5 +57,15 @@ public class AffectationHashMap {
             }
         }
     }
+    public void afficherDepartements() {
+        if (affectations.isEmpty()) {
+            System.out.println("Aucun département enregistré.");
+        } else {
+            System.out.println("Liste des départements :");
+            for (Departement d : affectations.values()) {
+                System.out.println(d);
+            }
+        }
+    }
 
 }
