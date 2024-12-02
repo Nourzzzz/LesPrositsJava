@@ -73,5 +73,10 @@ public class AffectationHashMap {
     public boolean rechercherDepartement(Departement d) {
         return affectations.containsValue(d);
     }
+    public TreeMap<Employe, Departement> trierMap() {
+        TreeMap<Employe, Departement> sortedMap = new TreeMap<>((e1, e2) -> Integer.compare(e1.getId(), e2.getId()));
+        sortedMap.putAll(affectations);
+        return sortedMap;
+    }
 
 }

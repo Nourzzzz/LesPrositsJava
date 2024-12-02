@@ -41,6 +41,7 @@ public class App {
         gestionAffectations.afficherEmployesEtDepartements();
         gestionAffectations.afficherEmployes();
         gestionAffectations.afficherDepartements();
+        System.out.println(gestionAffectations.trierMap());
 
 
     }
