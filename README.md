@@ -77,6 +77,6 @@ You would require the following tools to develop and run the project:
 Authors
 Nour Zouaghi
 [GitHub] https://github.com/Nourzzzz
-[LinkedIn] https://www.linkedin.com/in/NourZouaghi/
+[LinkedIn] https://tn.linkedin.com/in/nour-zouaghi-0a3969250?trk=people-guest_people_search-card
 License
 Java-Prosits Repository License is Academic Free License v3.0 [AFL-3.0].
