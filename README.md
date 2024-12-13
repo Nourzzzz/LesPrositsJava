@@ -1,22 +1,31 @@
-Current Version GitHub contributors GitHub stars GitHub top language Twitter Follow
+🌟 Project Highlights
+📌 Current Version: [java 8]
+👩‍💻 GitHub Contributors:Nour Zouaghi
+💻 Top Language: [Java]
 
-   Created by: Nour Zouaghi
-   Coached by: Klai Ghassen
+📝 Description
+This project is divided into two parts:
 
-Table of Contents
-Getting Started
-Tools Required
-Authors
-License
-Getting Started
+Part 1 (Projects 1 to 9): Focuses on zoo management (ZooManagement).
+Part 2: Dedicated to employee management (Employee Management).
+The project is designed to cover the basics of Java programming, including:
+
+📚 Collections: Map, Set, List
+🏗️ Encapsulation
+🧬 Inheritance
+🎭 Polymorphism
+⚠️ Exception Handling
+🧩 Interfaces
+📦 Objects and Classes
+
+   👩‍💻Created by: Nour Zouaghi
+
+📚 Table of Contents:
 
 main contains aggregate code of all branches
-Prosit-1 --> Prosit-8 every branch contains the code of its own Prosit developing the Zoo Management Project.
-Prosit-9 --> Prosit-12 contains the code of Employees Project.
-Prosit-13    Contains the code of Teacher-Subject.
 Down below, you can find the project structure of Zoo Management:
 
-	Java-Prosits
+	LesPrositsJava: Fichiers du prosits 1 a 9
 	├── README.md
 	├── .gitignore
 	├── .FirstProject.iml
@@ -45,21 +54,10 @@ Down below, you can find the project structure of Zoo Management:
 		|   ├── Herbivore.java
 		|   └── Omnivore.java
 		└── main
-                    └── ZooManagement.java
-Down below, you can find the project structure of Employees Management:
+                    └── ZooManagement.jav
 
-	Java-Prosits
-	├── README.md
-	├── .idea
-	│   ├── workspace.xml
-	│   └── vsc.xml
-	└── Prosit-9
-		├── .idea
-		|   ├── .gitignore
-		|   ├── misc.xml
-		|   ├── modules.xml
-		|   └── vcs.xml
-		└── src
+	LesPrositsJava: Fichiers du prosits 9 a 12
+	  └── src
 		|   ├── AffectationHashMap.java
 		|   ├── Departement.java
 		|   ├── DepartementHashSet.java
@@ -73,11 +71,9 @@ Down below, you can find the project structure of Employees Management:
 		|   └── SocieteArrayList.java
 		├── .gitignore
 		└── Prosit-9.iml
-Tools Required
+🛠️ Tools Required
 You would require the following tools to develop and run the project:
-
-A text editor or an IDE (like IntelliJ)
-A valid environment that allows java projects to run without exceptions.
+💻 IntelliJ IDEA: Download here
 Authors
 Nour Zouaghi
 [GitHub] https://github.com/Nourzzzz
