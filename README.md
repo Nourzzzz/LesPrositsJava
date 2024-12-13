@@ -81,6 +81,6 @@ A valid environment that allows java projects to run without exceptions.
 Authors
 Nour Zouaghi
 [GitHub] https://github.com/Nourzzzz
-[LinkedIn] https://www.linkedin.com/in/Nourzzzz/
+[LinkedIn] https://www.linkedin.com/in/NourZouaghi/
 License
 Java-Prosits Repository License is Academic Free License v3.0 [AFL-3.0].
